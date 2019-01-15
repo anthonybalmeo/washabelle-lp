@@ -16,7 +16,7 @@ const LinkWrapper = styled.div`
 
 const A = styled.a`
   font-size: 12px;
-  color: #1F4F46;
+  color: ${config.colors.purple};
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;

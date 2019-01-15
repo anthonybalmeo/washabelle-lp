@@ -5,6 +5,7 @@ import { config } from '../config'
 
 import { Header } from '../components/Header'
 import { SectionHero } from '../components/SectionHero'
+import { HowItWorks } from '../components/HowItWorks'
 import { Footer } from '../components/Footer'
 
 import SweetlifeMedium from '../assets/fonts/Sweetlife-Medium.woff2'
@@ -18,6 +19,7 @@ export default () =>
     <GlobalStyle />
     <Header />
     <SectionHero />
+    <HowItWorks />
     <Footer />
   </React.Fragment>
 
@@ -30,12 +32,15 @@ export default () =>
     overflow-x: hidden;
     font-family: 'Gotham Book';
 
-    color: ${config.colors.grayText};
-    background: ${config.colors.pageGray};
+    color: ${config.colors.black};
+    background: ${config.colors.white};
   }
 
   ul {
-    padding-left: 0;
+    margin:0;
+    padding: 0;
+    text-indent: 0;
+    list-style-type: none;
   }
 
   * {

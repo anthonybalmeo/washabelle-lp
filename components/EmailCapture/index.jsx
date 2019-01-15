@@ -13,7 +13,7 @@ const url = "//sweetgreen.us5.list-manage.com/subscribe/post?u=935cde8faa405d2d9
 const Paragraph = styled.p`
   font-size: 14px;
   line-height: 24px;
-  color: white;
+  color: ${config.colors.black};
 `
 
 const Input = styled.input`
@@ -22,8 +22,8 @@ const Input = styled.input`
   border: none;
   border-radius: 0;
   outline: none;
-  border-bottom: 3px solid white;
-  color: white;
+  border-bottom: 2px dashed ${config.colors.purple};
+  color: ${config.colors.black};
   padding-bottom: 5px;
   padding-top: 15px;
   align-self: flex-end;
@@ -35,15 +35,15 @@ const Input = styled.input`
   margin-right: 8px;
 
   &::placeholder {
-    color: #f6f6f6;
+    color: ${config.colors.black};
   }
 `
 
 const Button = styled.button`
   font-family: 'Sweetlife Medium';
   border-radius: 4px;
-  background: white;
-  color: ${config.colors.green};
+  background: ${config.colors.blue};
+  color: white;
   height: 32px;
   line-height: 36px;
   text-transform: uppercase;
@@ -123,7 +123,7 @@ export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
               (
                 <InputWrapper style={{ ...inputStyle, ...{ opacity: status === "sending" ? 0.2 : 1 } }}>
                   <Envelope src={envelope} alt="" />
-                  <Input type="email" name='email' placeholder="Enter email for exclusives" onChange={e => email = e.target.value} />
+                  <Input type="email" name='email' placeholder="Email address" onChange={e => email = e.target.value} />
                   <Button type="submit">sign up</Button>
                 </InputWrapper>
               )
