@@ -6,6 +6,7 @@ import { config } from '../config'
 import { Header } from '../components/Header'
 import { SectionHero } from '../components/SectionHero'
 import { HowItWorks } from '../components/HowItWorks'
+import { Benefits } from '../components/Benefits'
 import { Footer } from '../components/Footer'
 
 import SweetlifeMedium from '../assets/fonts/Sweetlife-Medium.woff2'
@@ -20,6 +21,7 @@ export default () =>
     <Header />
     <SectionHero />
     <HowItWorks />
+    <Benefits />
     <Footer />
   </React.Fragment>
 
@@ -34,6 +36,10 @@ export default () =>
 
     color: ${config.colors.black};
     background: ${config.colors.white};
+  }
+
+  p {
+    margin: 0;
   }
 
   ul {
