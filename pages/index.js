@@ -6,6 +6,7 @@ import { config } from '../config'
 import { Header } from '../components/Header'
 import { SectionHero } from '../components/SectionHero'
 import { HowItWorks } from '../components/HowItWorks'
+import { Affiliates } from '../components/Affiliates'
 import { Benefits } from '../components/Benefits'
 import { Footer } from '../components/Footer'
 
@@ -19,9 +20,14 @@ export default () =>
   <React.Fragment>
     <GlobalStyle />
     <Header />
-    <SectionHero />
-    <HowItWorks />
-    <Benefits />
+    <div className='section-container'>
+      <SectionHero />
+      <HowItWorks />
+      <hr />
+      <Benefits />
+      <hr />
+      <Affiliates />
+    </div>
     <Footer />
   </React.Fragment>
 
@@ -38,6 +44,11 @@ export default () =>
     background: ${config.colors.white};
   }
 
+  .section-container {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+
   p {
     margin: 0;
   }
@@ -47,6 +58,10 @@ export default () =>
     padding: 0;
     text-indent: 0;
     list-style-type: none;
+  }
+
+  hr {
+    border-top: 1px solid ${config.colors.purple};
   }
 
   * {

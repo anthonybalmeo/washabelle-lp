@@ -65,6 +65,7 @@ const BenefitsButton = styled.button`
 export const Benefits = () =>
   <React.Fragment>
     <BenefitsComponent>
+      <h5>Benefits</h5>
       <BenefitsComponentList>
         {
           BenefitsFixture.map(({ copy, image }) => (
