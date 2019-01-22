@@ -1,9 +1,12 @@
 import React from 'react'
 import { config } from '../../config'
 import styled from 'styled-components'
+import { MobileAndTablet, Desktop } from '../MediaQueries'
+import { HowItWorksMobile } from './HowItWorksMobile'
+import { HowItWorksDesktop } from './HowItWorksDesktop'
 
 const HowItWorksComponent = styled.section`
-  margin-top: 64px;
+  margin-top: 4rem;
 `
 
 const HowItWorksHeader = styled.h1`
@@ -18,6 +21,20 @@ const HowItWorksList = styled.ul`
 
 const HowItWorksListItem = styled.li`
   flex: 1 1;
+`
+
+const HowItWorksNumber = styled.div`
+  flex: 1 1;
+  font-size: 2rem;
+
+  span {
+    display: block;
+    width: 3.75rem;
+    line-height: 3.5rem;
+    border-radius: 50%;
+    border: 0.1875rem solid ${config.colors.black};
+    margin: 0 auto;
+  }
 `
 
 const howItWorksFixture = [
@@ -39,18 +56,11 @@ export const HowItWorks = () =>
   <React.Fragment>
     <HowItWorksComponent>
       <HowItWorksHeader>How It Works</HowItWorksHeader>
-      {
-        <HowItWorksList>
-        {
-          howItWorksFixture.map(({ title, copy }, i) => (
-            <HowItWorksListItem key={i}>
-              <h1>{i+1}</h1>
-              <h3>{title}</h3>
-              <p>{copy}</p>
-            </HowItWorksListItem>
-          ))
-        }
-        </HowItWorksList>
-      }
+      <MobileAndTablet>
+        <HowItWorksMobile howItWorksFixture={howItWorksFixture} />
+      </MobileAndTablet>
+      <Desktop>
+        <HowItWorksDesktop howItWorksFixture={howItWorksFixture} />
+      </Desktop>
     </HowItWorksComponent>
   </React.Fragment>

@@ -1,7 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import envelope from './envelope.svg'
 import asterisk from './asterisk.svg'
 
 import MailchimpSubscribe from "react-mailchimp-subscribe"
@@ -41,7 +40,7 @@ const Input = styled.input`
 
 const Button = styled.button`
   font-family: 'Sweetlife Medium';
-  border-radius: 4px;
+  border-radius: 3px;
   background: ${config.colors.blue};
   color: white;
   height: 32px;
@@ -56,24 +55,12 @@ const Button = styled.button`
 
 const InputWrapper = styled.div`
   position: relative;
-  margin: 60px auto;
+  margin: 2rem auto;
   width: 90%;
   max-width: 470px;
 
-  @media (min-width: 1100px) {
-    margin-top: 64px;
-  }
-`
-
-const Envelope = styled.img`
-  position: absolute;
-  left: 2px;
-  bottom: 10px;
-  display: none;
-
-  @media (min-width: 1100px) {
-    bottom: 48px;
-    display: block;
+  @media (min-width: 600px) {
+    margin: 2rem 0;
   }
 `
 
@@ -122,7 +109,6 @@ export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
               <Fresh className={freshClass} /> :
               (
                 <InputWrapper style={{ ...inputStyle, ...{ opacity: status === "sending" ? 0.2 : 1 } }}>
-                  <Envelope src={envelope} alt="" />
                   <Input type="email" name='email' placeholder="Email address" onChange={e => email = e.target.value} />
                   <Button type="submit">sign up</Button>
                 </InputWrapper>

@@ -15,8 +15,8 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html>
+        <title>Washabelle</title>
         <Head>
-          <title>Washabelle</title>
           <meta name="description" content="Washabelle Description" />
 
           {this.props.styleTags}

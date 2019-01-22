@@ -1,6 +1,9 @@
 import React from 'react'
 import { config } from '../../config'
 import styled from 'styled-components'
+import { MobileAndTablet, Desktop } from '../MediaQueries'
+import { BenefitsMobile } from './BenefitsMobile'
+import { BenefitsDesktop } from './BenefitsDesktop'
 
 const BenefitsFixture = [
   {
@@ -24,30 +27,9 @@ const BenefitsFixture = [
 const BenefitsComponent = styled.section`
 `
 
-const BenefitsComponentList = styled.ul`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  text-align: center;
-`
-
-const BenefitsComponentListItem = styled.li`
-  flex: 1 1;
-  margin: 1rem;
-  box-shadow: 0px 3px 10px ${config.colors.gray};
-  border: 1px solid ${config.colors.black};
-`
-const BenefitsComponentImageContainer = styled.div`
-  background: ${config.colors.purple};
-`
-
-const BenefitsComponentCopyContainer = styled.div`
-  background: ${config.colors.white};
-`
-
 const BenefitsButton = styled.button`
   font-family: 'Sweetlife Medium';
-  border-radius: 4px;
+  border-radius: 3px;
   background: ${config.colors.blue};
   color: white;
   height: 32px;
@@ -66,20 +48,12 @@ export const Benefits = () =>
   <React.Fragment>
     <BenefitsComponent>
       <h5>Benefits</h5>
-      <BenefitsComponentList>
-        {
-          BenefitsFixture.map(({ copy, image }) => (
-            <BenefitsComponentListItem>
-              <BenefitsComponentImageContainer>
-                <p>{image}</p>
-              </BenefitsComponentImageContainer>
-              <BenefitsComponentCopyContainer>
-                <p>{copy}</p>
-              </BenefitsComponentCopyContainer>
-            </BenefitsComponentListItem>
-          ))
-        }
-      </BenefitsComponentList>
+      <MobileAndTablet>
+        <BenefitsMobile BenefitsFixture={BenefitsFixture} />
+      </MobileAndTablet>
+      <Desktop>
+        <BenefitsDesktop BenefitsFixture={BenefitsFixture} />
+      </Desktop>
       <BenefitsButton>Sign Up</BenefitsButton>
     </BenefitsComponent>
   </React.Fragment>
