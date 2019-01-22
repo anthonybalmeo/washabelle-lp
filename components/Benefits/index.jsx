@@ -39,7 +39,7 @@ const BenefitsButton = styled.button`
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 0 10px;
+  padding: 0 4rem;
   margin: 0 auto;
   display: block;
 `
