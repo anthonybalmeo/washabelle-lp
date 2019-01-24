@@ -10,11 +10,8 @@ import { Affiliates } from '../components/Affiliates'
 import { Benefits } from '../components/Benefits'
 import { Footer } from '../components/Footer'
 
-import SweetlifeMedium from '../assets/fonts/Sweetlife-Medium.woff2'
-import GothamBook from '../assets/fonts/Gotham-Book.woff2'
-import GothamMedium from '../assets/fonts/Gotham-Medium.woff2'
-import GothamBlack from '../assets/fonts/Gotham-Black.woff2'
-import FlamaCondensed from '../assets/fonts/FlamaCondensed-Medium.woff2'
+import DecourSoftBold from '../assets/fonts/DecourSoft-Bold.woff2'
+import DecourSoftRegular from '../assets/fonts/DecourSoft-Regular.woff2'
 
 export default () =>
   <React.Fragment>
@@ -38,7 +35,7 @@ export default () =>
     font-size: 16px;
     width: 100%;
     overflow-x: hidden;
-    font-family: 'Gotham Book';
+    font-family: 'Decour Soft Regular';
 
     color: ${config.colors.black};
     background: ${config.colors.white};
@@ -51,6 +48,14 @@ export default () =>
 
   p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
+  }
+
+  p {
+    font-family: 'Decour Soft Regular';
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Decour Soft Bold';
   }
 
   ul {
@@ -79,36 +84,15 @@ export default () =>
   }
 
   @font-face {
-    font-family: 'Sweetlife Medium';
-    src: url('${SweetlifeMedium}') format('woff2');
+    font-family: 'Decour Soft Regular';
+    src: url('${DecourSoftRegular}') format('woff2');
     font-weight: normal;
     font-style: normal;
   }
 
   @font-face {
-    font-family: 'Gotham Book';
-    src: url('${GothamBook}') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Gotham Medium';
-    src: url('${GothamMedium}') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Gotham Black';
-    src: url('${GothamBlack}') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-  }
-
-  @font-face {
-    font-family: 'Flama Condensed';
-    src: url('${FlamaCondensed}') format('woff2');
+    font-family: 'Decour Soft Bold';
+    src: url('${DecourSoftBold}') format('woff2');
     font-weight: normal;
     font-style: normal;
   }

@@ -16,7 +16,7 @@ const Paragraph = styled.p`
 `
 
 const Input = styled.input`
-  font-family: 'Gotham Book';
+  font-family: 'Decour Soft Regular';
   font-size: 16px;
   border: none;
   border-radius: 0;
@@ -39,7 +39,7 @@ const Input = styled.input`
 `
 
 const Button = styled.button`
-  font-family: 'Sweetlife Medium';
+  font-family: 'Decour Soft Bold';
   border-radius: 3px;
   background: ${config.colors.blue};
   color: white;
