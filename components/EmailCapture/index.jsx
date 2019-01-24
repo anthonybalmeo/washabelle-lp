@@ -29,8 +29,7 @@ const Input = styled.input`
   transition: border-bottom 0.25s ease;
   background: transparent;
   -webkit-appearance: none;
-
-  width: 70%;
+  width: 80%;
   margin-right: 8px;
 
   &::placeholder {
@@ -40,17 +39,20 @@ const Input = styled.input`
 
 const Button = styled.button`
   font-family: 'Decour Soft Bold';
+  font-size: 12px;
   border-radius: 3px;
   background: ${config.colors.blue};
   color: white;
   height: 32px;
-  line-height: 36px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  line-height: 32px;
+  letter-spacing: 1px;
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 0 10px;
+  padding: 0 12px;
+  position: absolute;
+  top: 0;
+  right: 73px;
 `
 
 const InputWrapper = styled.div`
@@ -110,7 +112,7 @@ export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
               (
                 <InputWrapper style={{ ...inputStyle, ...{ opacity: status === "sending" ? 0.2 : 1 } }}>
                   <Input type="email" name='email' placeholder="Email address" onChange={e => email = e.target.value} />
-                  <Button type="submit">sign up</Button>
+                  <Button type="submit">Sign Up</Button>
                 </InputWrapper>
               )
           }
