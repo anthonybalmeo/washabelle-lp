@@ -58,7 +58,10 @@ const AffiliatesFixture = [
 ]
 
 const AffiliatesQuoteContainer = styled.div`
-  padding: 0 3.75rem;
+  padding: 3rem 1.5rem;
+  @media only screen and (min-width: 1100px) {
+    padding: 0 3.75rem;
+  }
 `
 
 const AffiliatesComponent = styled.section`
@@ -129,7 +132,7 @@ const AffiliatesButton = styled.a`
   display: block;
   font-size: 20px;
   line-height: 27px;
-  margin: 60px auto 80px;
+  margin: 0 auto 80px;
   padding: 0.75rem 0;
   width: 212px;
   background-color: ${config.colors.blue};
@@ -137,6 +140,10 @@ const AffiliatesButton = styled.a`
   border-radius: 3px;
   text-decoration: none;
   text-align: center;
+
+  @media only screen and (min-width: 1100px) {
+    margin: 60px auto 80px;
+  }
 `
 
 export const Affiliates = () =>

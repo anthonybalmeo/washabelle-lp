@@ -6,6 +6,7 @@ const HowItWorksList = styled.ul`
   display: flex;
   flex-direction: column;
   text-align: center;
+  margin-bottom: 4rem;
 `
 
 const HowItWorksListItem = styled.li`
@@ -16,6 +17,7 @@ const HowItWorksListItem = styled.li`
 const HowItWorksNumber = styled.div`
   flex: 1 1;
   font-size: 2rem;
+  margin-bottom: 23px;
 
   span {
     display: block;
@@ -27,16 +29,34 @@ const HowItWorksNumber = styled.div`
   }
 `
 
+const HowItWorksTitle = styled.h3`
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 10px;
+`
+const HowItWorksCopy = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0 auto;
+  max-width: 330px;
+`
+const HowItWorksContainer = styled.div`
+  max-width: 320px;
+  margin: 0 auto;
+`
+
 export const HowItWorksMobile = (props) =>
   <HowItWorksList>
   {
     props.howItWorksFixture.map(({ title, copy }, i) => (
       <HowItWorksListItem key={i}>
-        <HowItWorksNumber>
-          <span>{i+1}</span>
-        </HowItWorksNumber>
-        <h3>{title}</h3>
-        <p>{copy}</p>
+        <HowItWorksContainer>
+          <HowItWorksNumber>
+            <span>{i+1}</span>
+          </HowItWorksNumber>
+          <HowItWorksTitle>{title}</HowItWorksTitle>
+          <HowItWorksCopy>{copy}</HowItWorksCopy>
+        </HowItWorksContainer>
       </HowItWorksListItem>
     ))
   }

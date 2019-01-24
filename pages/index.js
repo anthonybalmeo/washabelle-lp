@@ -68,7 +68,12 @@ export default () =>
 
   hr {
     border-top: 1px solid ${config.colors.purple};
-    margin: 20px 0;
+    margin: 20px auto;
+    width: 65%;
+
+    @media only screen and (min-width: 1100px) {
+      width: 100%;
+    }
   }
 
   .section-title {

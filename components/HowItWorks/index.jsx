@@ -11,10 +11,15 @@ const HowItWorksComponent = styled.section`
 
 const HowItWorksHeader = styled.h1`
   color: ${config.colors.purple};
-  font-size: 36px;
-  line-height: 49px;
-  margin-bottom: 60px;
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 3rem;
   text-align: center;
+
+  @media only screen and (min-width: 1100px) {
+    font-size: 36px;
+    line-height: 49px
+  }
 `
 
 const howItWorksFixture = [
