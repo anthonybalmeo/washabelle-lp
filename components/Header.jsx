@@ -6,6 +6,11 @@ import { config } from '../config'
 const Logo = styled.img`
   height: 36px;
   cursor: pointer;
+  margin: 0 auto;
+
+  @media only screen and (min-width: 600px) {
+    margin: 0;
+  }
 `
 
 const LinkWrapper = styled.div`

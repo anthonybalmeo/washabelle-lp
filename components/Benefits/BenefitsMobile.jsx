@@ -9,14 +9,17 @@ const BenefitsComponentList = styled.ul`
   flex-direction: column;
   justify-content: space-between;
   text-align: center;
+  max-width: 320px;
+  width: 100%;
+  margin: 0 auto;
 `
 
 const BenefitsComponentListItem = styled.li`
+  box-shadow: 0 0 20px 0 rgba(213, 213, 213, 50);
   flex: 1 1;
+  height: 350px;
   margin: 1rem;
   margin-right: 1rem;
-  box-shadow: 0px 3px 10px ${config.colors.gray};
-  border: 1px solid ${config.colors.black};
 `
 const BenefitsComponentImageContainer = styled.div`
   background: ${config.colors.purple};
@@ -35,6 +38,12 @@ const BenefitsComponentImageContainer = styled.div`
     background-position: -1px -16px;
     z-index: 3;
   }
+`
+
+const BenefitsCopy = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+  margin: 1rem 1.5rem 0;
 `
 
 const BenefitsComponentImage = styled.img`
@@ -58,7 +67,7 @@ export const BenefitsMobile = (props) =>
           <BenefitsComponentImage src={image} />
         </BenefitsComponentImageContainer>
         <BenefitsComponentCopyContainer>
-          <p>{copy}</p>
+          <BenefitsCopy>{copy}</BenefitsCopy>
         </BenefitsComponentCopyContainer>
       </BenefitsComponentListItem>
     ))

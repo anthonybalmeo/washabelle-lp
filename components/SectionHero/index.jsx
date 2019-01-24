@@ -12,7 +12,10 @@ const SectionHeroComponent = styled.section`
 const HeroContainer = styled.div`
   align-items: stretch;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  @media only screen and (min-width: 600px) {
+    flex-direction: row;
+  }
 `
 const HeroColumn = styled.div`
   align-self: center;
@@ -24,6 +27,7 @@ const HeroColumn = styled.div`
     color: ${config.colors.purple};
     margin-right: 1.5rem;
   }
+
   &:last-child {
     flex-basis: 20%;
   }

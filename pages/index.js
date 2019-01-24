@@ -75,7 +75,14 @@ export default () =>
     color: ${config.colors.purple};
     font-size: 14px;
     line-height: 19px;
-    margin-bottom: 2rem;
+    max-width: 280px;
+    margin: 1rem auto 1rem;
+    width: 100%;
+
+    @media only screen and (min-width: 1100px) {
+      margin: 0 auto 2rem;
+      max-width: none;
+    }
   }
 
   * {

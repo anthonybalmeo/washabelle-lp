@@ -87,14 +87,27 @@ const QuoteLink = styled.a`
 `
 const AffiliatesList = styled.div`
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   padding-top: 1rem;
+  flex-direction: column;
+  max-width: 320px;
+  margin: 0 auto;
+  width: 100%;
+
+  @media only screen and (min-width: 1100px) {
+    max-width: none;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `
 
 const AffiliatesListItem = styled.div`
   align-self: center;
-  flex: 1 0 33.33%;
+  flex: 1 0 100%;
+
+  @media only screen and (min-width: 1100px) {
+    flex: 1 0 33.33%;
+  }
 `
 
 const AffiliatesImage = styled.img`
