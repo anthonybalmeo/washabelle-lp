@@ -1,10 +1,9 @@
 import styled from 'styled-components'
 import logo from '../assets/header-logo.png'
-import { TabletAndDesktop, Mobile, Desktop } from './MediaQueries'
 import { config } from '../config'
 
 const Logo = styled.img`
-  height: 36px;
+  height: 2.25rem;
   cursor: pointer;
   margin: 0 auto;
 
@@ -20,12 +19,12 @@ const LinkWrapper = styled.div`
 `
 
 const A = styled.a`
-  font-size: 12px;
+  font-size: 0.75rem;
   color: ${config.colors.purple};
-  letter-spacing: 2px;
+  letter-spacing: 0.125rem;
   text-transform: uppercase;
   font-weight: bold;
-  margin-right: 30px;
+  margin-right: 1.875rem;
 
   &, &:active, &:hover {
     text-decoration: none;
@@ -41,7 +40,7 @@ const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   display: flex;
-  padding: 22px;
+  padding: 1.375rem;
   z-index: 999;
 `
 
@@ -62,7 +61,4 @@ export const Header = () =>
       </LinkWrapper>
 
     </TabletAndDesktop> */}
-
-    <Mobile>
-    </Mobile>
   </HeaderStyles>

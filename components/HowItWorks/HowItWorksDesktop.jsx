@@ -16,9 +16,9 @@ const HowItWorksListItem = styled.li`
   &:before {
     content: '';
     position: absolute;
-    max-width: 270px;
-    border-top: 1px dashed ${config.colors.black};
-    transform: translate(60px,30px);
+    max-width: 16.875rem;
+    border-top: 0.0625rem dashed ${config.colors.black};
+    transform: translate(3.75rem, 1.875rem);
     width: 100%;
   }
 
@@ -32,7 +32,7 @@ const HowItWorksListItem = styled.li`
 const HowItWorksNumber = styled.div`
   flex: 1 1;
   font-size: 2rem;
-  margin-bottom: 23px;
+  margin-bottom: 1.4375rem;
 
   span {
     display: block;
@@ -45,15 +45,11 @@ const HowItWorksNumber = styled.div`
 `
 
 const HowItWorksTitle = styled.h3`
-  font-size: 20px;
-  line-height: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 1.4375rem;
 `
 const HowItWorksCopy = styled.p`
-  font-size: 16px;
-  line-height: 24px;
   margin: 0 auto;
-  max-width: 330px;
+  max-width: 20.625rem;
 `
 
 export const HowItWorksDesktop = (props) =>

@@ -76,15 +76,15 @@ const Quote = styled.div`
 
 const QuoteCopy = styled.h5`
   font-family: 'Decour Soft Bold';
-  font-size: 18px;
-  line-height: 30px;
+  font-size: 1.125rem;
+  line-height: 1.875rem;
   margin-bottom: 1rem;
 `
 
 const QuoteLink = styled.a`
   font-family: 'Decour Soft Black';
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
   text-transform: uppercase;
   text-decoration: none;
   color: ${config.colors.blue};
@@ -94,7 +94,7 @@ const AffiliatesList = styled.div`
   justify-content: center;
   padding-top: 1rem;
   flex-direction: column;
-  max-width: 320px;
+  max-width: 20rem;
   margin: 0 auto;
   width: 100%;
 
@@ -123,28 +123,9 @@ const AffiliateImageDescription = styled.div`
   font-family: 'Decour Soft Black';
   color: ${config.colors.white};
   background-color: ${config.colors.purple};
-  font-size: 14px;
-  line-height: 30px;
+  font-size: 0.875rem;
+  line-height: 1.875rem;
   padding: 1rem;
-`
-
-const AffiliatesButton = styled.a`
-  font-family: 'Decour Soft Bold';
-  display: block;
-  font-size: 20px;
-  line-height: 27px;
-  margin: 0 auto 80px;
-  padding: 0.75rem 0;
-  width: 212px;
-  background-color: ${config.colors.blue};
-  color: ${config.colors.white};
-  border-radius: 3px;
-  text-decoration: none;
-  text-align: center;
-
-  @media only screen and (min-width: 1100px) {
-    margin: 60px auto 80px;
-  }
 `
 
 export const Affiliates = () =>

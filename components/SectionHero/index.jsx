@@ -15,7 +15,7 @@ const HeroContainer = styled.div`
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  max-width: 320px;
+  max-width: 20rem;
   width: 100%;
 
   @media only screen and (min-width: 1100px) {
@@ -47,17 +47,13 @@ const HeroImage = styled.img`
 const HeroIcon = styled.img`
   display: block;
   margin: 0 auto;
-  width: 72px;
+  width: 4.5rem;
 `
 
 const HeroTitle = styled.h1`
-  font-size: 24px;
-  line-height: 29px;
   margin: 0 auto 40px;
 
   @media only screen and (min-width: 1100px) {
-    font-size: 36px;
-    line-height: 49px;
     margin: 20px auto 40px;
   }
 `

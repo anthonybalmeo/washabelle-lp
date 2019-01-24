@@ -6,20 +6,17 @@ import { HowItWorksMobile } from './HowItWorksMobile'
 import { HowItWorksDesktop } from './HowItWorksDesktop'
 
 const HowItWorksComponent = styled.section`
-  margin-top: 5rem;
+  margin-top: 3.75rem;
+
+  @media only screen and (min-width: 1100px) {
+    margin-top: 5rem;
+  }
 `
 
 const HowItWorksHeader = styled.h1`
   color: ${config.colors.purple};
-  font-size: 24px;
-  line-height: 29px;
   margin-bottom: 3rem;
   text-align: center;
-
-  @media only screen and (min-width: 1100px) {
-    font-size: 36px;
-    line-height: 49px
-  }
 `
 
 const howItWorksFixture = [

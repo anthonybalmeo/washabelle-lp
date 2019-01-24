@@ -17,7 +17,7 @@ const HowItWorksListItem = styled.li`
 const HowItWorksNumber = styled.div`
   flex: 1 1;
   font-size: 2rem;
-  margin-bottom: 23px;
+  margin-bottom: 1.4375rem;
 
   span {
     display: block;
@@ -30,19 +30,15 @@ const HowItWorksNumber = styled.div`
 `
 
 const HowItWorksTitle = styled.h3`
-  font-size: 20px;
-  line-height: 27px;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 `
 const HowItWorksCopy = styled.p`
-  font-size: 16px;
-  line-height: 24px;
   margin: 0 auto;
-  max-width: 330px;
+  max-width: 20.625rem;
 `
 const HowItWorksContainer = styled.div`
-  max-width: 320px;
   margin: 0 auto;
+  max-width: 20rem;
 `
 
 export const HowItWorksMobile = (props) =>

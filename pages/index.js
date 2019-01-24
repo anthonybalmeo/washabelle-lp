@@ -43,7 +43,7 @@ export default () =>
   }
 
   .section-container {
-    max-width: 1160px;
+    max-width: 72.5rem;
     margin: 0 auto;
   }
 
@@ -51,12 +51,29 @@ export default () =>
     margin: 0;
   }
 
-  p {
-    font-family: 'Decour Soft Regular';
-  }
-
   h1, h2, h3, h4, h5, h6 {
     font-family: 'Decour Soft Bold';
+  }
+
+  p {
+    font-family: 'Decour Soft Regular';
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    line-height: 1.8125rem;
+
+    @media only screen and (min-width: 1100px) {
+      font-size: 2.25rem;
+      line-height: 2.6875rem;
+    }
+  }
+
+  h3 {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
   }
 
   ul {
@@ -67,9 +84,9 @@ export default () =>
   }
 
   hr {
-    border-top: 1px solid ${config.colors.purple};
-    margin: 20px auto;
-    width: 320px;
+    border-top: 0.0625rem solid ${config.colors.purple};
+    margin: 1.25rem auto;
+    width: 20rem;
 
     @media only screen and (min-width: 1100px) {
       width: 100%;
@@ -78,9 +95,9 @@ export default () =>
 
   .section-title {
     color: ${config.colors.purple};
-    font-size: 14px;
-    line-height: 19px;
-    max-width: 320px;
+    font-size: 0.875rem;
+    line-height: 1.1875rem;
+    max-width: 20rem;
     margin: 1rem auto 1rem;
     width: 100%;
 

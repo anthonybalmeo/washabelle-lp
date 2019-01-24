@@ -16,10 +16,8 @@ const FooterEnd = styled.footer`
   text-align: center;
   padding: 2rem 0;
 `
-const FooterLinksListHeader = styled.h5`
-  font-size: 20px;
-  line-height: 27px;
-  margin-bottom: 24px;
+const FooterLinksListHeader = styled.h3`
+  margin-bottom: 1.5rem;
 `
 
 const FooterLinksList = styled.ul`
@@ -29,12 +27,9 @@ const FooterLinksList = styled.ul`
 
 const FooterLinksListItems = styled.li`
   flex: 1 1;
-  margin-bottom: 20px;
-  > a {
+  margin-bottom: 1.25rem;
+  > p > a {
     color: ${config.colors.black};
-    line-height: 2.5;
-    font-size: 14px;
-    line-height: 19px;
     text-decoration: none;
   }
 `
@@ -43,7 +38,7 @@ const SocialList = styled.ul`
   display: flex;
   flex-direction: row;
   margin: 3rem auto 2rem;
-  max-width: 230px;
+  max-width: 14.375rem;
 
   @media (min-width: 1100px) {
     margin: 0;
@@ -59,14 +54,12 @@ const SocialLinks = styled.a`
 `
 
 const FooterTitle = styled.h3`
-  margin-bottom: 12px;
-  margin-top: 28px;
-  font-size: 20px;
-  line-height: 27px;
+  margin-bottom: 0.75rem;
+  margin-top: 1.75rem;
 `
 const FooterCopy = styled.p`
-  font-size: 18px;
-  line-height: 24px;
+  font-size: 1.125rem;
+  line-height: 1.5rem;
 `
 
 const FooterComponentContainer = styled.div`
@@ -76,6 +69,7 @@ const FooterComponentContainer = styled.div`
   text-align: center;
   
   @media (min-width: 1100px) {
+    align-items: flex-end;
     padding: 4rem 1rem;
     flex-direction: row;
     text-align: left;
@@ -86,15 +80,17 @@ const FooterComponentColumn = styled.div`
 
   @media (min-width: 1100px) {
     flex: 1 1;
+    margin-bottom: 1.95rem;
 
     &:first-child {
       flex: 1 1 15%;
+      margin-bottom: 0;
     }
   }
 `
 
 const FooterIcon = styled.img`
-  width: 48px;
+  width: 3rem;
 `
 
 export class Footer extends React.Component {
@@ -121,25 +117,25 @@ export class Footer extends React.Component {
             <FooterComponentColumn>
               <FooterLinksListHeader>Shop Mattresses</FooterLinksListHeader>
               <FooterLinksList>
-                <FooterLinksListItems><a href='#'>Shop Kids</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Shop Adults</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Shop Pets</a></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Shop Kids</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Shop Adults</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Shop Pets</a></p></FooterLinksListItems>
               </FooterLinksList>
             </FooterComponentColumn>
             <FooterComponentColumn>
               <FooterLinksListHeader>Learn More</FooterLinksListHeader>
               <FooterLinksList>
-                <FooterLinksListItems><a href='#'>About Us</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Reviews</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Frequently Asked Questions</a></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>About Us</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Reviews</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Frequently Asked Questions</a></p></FooterLinksListItems>
               </FooterLinksList>
             </FooterComponentColumn>
             <FooterComponentColumn>
               <FooterLinksListHeader>Warranties</FooterLinksListHeader>
               <FooterLinksList>
-                <FooterLinksListItems><a href='#'>101 night sleep guarantee</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Our 10 year warranty</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Shipping and returns</a></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>101 night sleep guarantee</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Our 10 year warranty</a></p></FooterLinksListItems>
+                <FooterLinksListItems><p><a href='#'>Shipping and returns</a></p></FooterLinksListItems>
               </FooterLinksList>
             </FooterComponentColumn>
           </FooterComponentContainer>
