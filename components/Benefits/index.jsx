@@ -8,6 +8,7 @@ import machine from './icon-machine.png'
 import trophy from './icon-trophy.png'
 import money from './icon-money.png'
 import badge from './icon-badge.png'
+import { BlueButton } from '../Button'
 
 const BenefitsFixture = [
   {
@@ -29,20 +30,7 @@ const BenefitsFixture = [
 ]
 
 const BenefitsComponent = styled.section`
-`
-const BenefitsButton = styled.a`
-  font-family: 'Decour Soft Bold';
-  display: block;
-  font-size: 1.25rem;
-  line-height: 1.6875rem;
-  margin: 1.25rem auto 3.75rem;
-  padding: 0.75rem 0;
-  width: 13.25rem;
-  background-color: ${config.colors.blue};
-  color: ${config.colors.white};
-  border-radius: 0.1875rem;
-  text-decoration: none;
-  text-align: center;
+  position: relative;
 `
 
 export const Benefits = () =>
@@ -55,6 +43,6 @@ export const Benefits = () =>
       <Desktop>
         <BenefitsDesktop BenefitsFixture={BenefitsFixture} />
       </Desktop>
-      <BenefitsButton href='#'>Sign Up</BenefitsButton>
+      <BlueButton top={20} bottom={60} href='#'>Sign Up</BlueButton>
     </BenefitsComponent>
   </React.Fragment>

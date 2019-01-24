@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import sectionHero from './section-hero.jpg'
 import headerLogo from '../../assets/washabelle-icon.png'
 import { Desktop } from '../MediaQueries'
+import { PurpleButton } from '../Button'
 const SectionHeroComponent = styled.section`
   background: ${config.colors.white};
   margin-top: 136px;
@@ -60,20 +61,6 @@ const HeroTitle = styled.h1`
     margin: 20px auto 40px;
   }
 `
-const HeroButton = styled.a`
-  font-family: 'Decour Soft Bold';
-  display: block;
-  font-size: 20px;
-  line-height: 27px;
-  margin: 20px auto 40px;
-  padding: 0.75rem 0;
-  width: 212px;
-  background-color: ${config.colors.purple};
-  color: ${config.colors.white};
-  border-radius: 3px;
-  text-decoration: none;
-  text-align: center;
-`
 
 export const SectionHero = () =>
   <React.Fragment>
@@ -85,7 +72,7 @@ export const SectionHero = () =>
               <HeroIcon src={headerLogo} />
             </Desktop>
             <HeroTitle>Washabelle Affiliate&nbsp;Program</HeroTitle>
-            <HeroButton href='#'>Join Now</HeroButton>
+            <PurpleButton bottom={60} href='#'>Join Now</PurpleButton>
           </HeroColumn>
           <HeroColumn>
             <HeroImage src={sectionHero} />

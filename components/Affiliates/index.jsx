@@ -1,7 +1,8 @@
 import React from 'react'
 import { config } from '../../config'
 import styled from 'styled-components'
-import placeholder from '../../assets/placeholder-square.jpg'
+import { BlueButton } from '../Button'
+import { MobileAndTablet, Desktop } from '../MediaQueries'
 import affiliat1 from './affiliate-1.jpg'
 import affiliat2 from './affiliate-2.jpg'
 import affiliat3 from './affiliate-3.jpg'
@@ -173,6 +174,11 @@ export const Affiliates = () =>
         )
       }
       </AffiliatesList>
-      <AffiliatesButton>Sign up</AffiliatesButton>
+      <MobileAndTablet>
+        <BlueButton top={0} bottom={80} href='#'>Sign Up</BlueButton>
+      </MobileAndTablet>
+      <Desktop>
+        <BlueButton top={60} bottom={80} href='#'>Sign Up</BlueButton>
+      </Desktop>
     </AffiliatesComponent>
   </React.Fragment>
