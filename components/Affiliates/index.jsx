@@ -65,21 +65,23 @@ const AffiliatesComponent = styled.section`
   background: ${config.colors.white};
 `
 const Quote = styled.div`
+  font-family: 'Decour Soft Black';
   font-size: 2rem;
-  font-weight: bold;
   color: ${config.colors.blue};
 `
 
-const QuoteCopy = styled.p`
+const QuoteCopy = styled.h5`
+  font-family: 'Decour Soft Bold';
   font-size: 18px;
   line-height: 30px;
   margin-bottom: 1rem;
 `
 
 const QuoteLink = styled.a`
+  font-family: 'Decour Soft Black';
   font-size: 14px;
   line-height: 30px;
-  font-weight: bold;
+  text-transform: uppercase;
   text-decoration: none;
   color: ${config.colors.blue};
 `
@@ -101,6 +103,7 @@ const AffiliatesImage = styled.img`
   width: 100%;
 `
 const AffiliateImageDescription = styled.div`
+  font-family: 'Decour Soft Black';
   color: ${config.colors.white};
   background-color: ${config.colors.purple};
   font-size: 14px;
@@ -109,6 +112,7 @@ const AffiliateImageDescription = styled.div`
 `
 
 const AffiliatesButton = styled.a`
+  font-family: 'Decour Soft Bold';
   display: block;
   font-size: 20px;
   line-height: 27px;
@@ -125,7 +129,7 @@ const AffiliatesButton = styled.a`
 export const Affiliates = () =>
   <React.Fragment>
     <AffiliatesComponent>
-      <h5 class='section-title'>What our affiliates say about us</h5>
+      <h5 className='section-title'>What our affiliates say about us</h5>
       <AffiliatesList>
       {
         AffiliatesFixture.map(({copy, link, image}, i) =>

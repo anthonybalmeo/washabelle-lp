@@ -11,6 +11,7 @@ import { Benefits } from '../components/Benefits'
 import { Footer } from '../components/Footer'
 
 import DecourSoftBold from '../assets/fonts/DecourSoft-Bold.woff2'
+import DecourSoftBlack from '../assets/fonts/DecourSoft-Black.woff2'
 import DecourSoftRegular from '../assets/fonts/DecourSoft-Regular.woff2'
 
 export default () =>
@@ -93,6 +94,13 @@ export default () =>
   @font-face {
     font-family: 'Decour Soft Bold';
     src: url('${DecourSoftBold}') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: 'Decour Soft Black';
+    src: url('${DecourSoftBlack}') format('woff2');
     font-weight: normal;
     font-style: normal;
   }

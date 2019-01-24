@@ -46,6 +46,7 @@ const HeroTitle = styled.h1`
   margin: 20px auto 40px;
 `
 const HeroButton = styled.a`
+  font-family: 'Decour Soft Bold';
   display: block;
   font-size: 20px;
   line-height: 27px;

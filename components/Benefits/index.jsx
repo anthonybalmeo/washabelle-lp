@@ -38,6 +38,7 @@ const BenefitsSectionTitle = styled.h5`
 `
 
 const BenefitsButton = styled.a`
+  font-family: 'Decour Soft Bold';
   display: block;
   font-size: 20px;
   line-height: 27px;
@@ -54,7 +55,7 @@ const BenefitsButton = styled.a`
 export const Benefits = () =>
   <React.Fragment>
     <BenefitsComponent>
-      <h5 class='section-title'>Benefits</h5>
+      <h5 className='section-title'>Benefits</h5>
       <MobileAndTablet>
         <BenefitsMobile BenefitsFixture={BenefitsFixture} />
       </MobileAndTablet>
