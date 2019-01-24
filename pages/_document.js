@@ -33,17 +33,17 @@ export default class MyDocument extends Document {
 
           <meta property="og:url" content="https://washabelle.com" />
           <meta property="og:type" content="website" />
-          <meta property="og:title" content="washabelle" />
+          <meta property="og:title" content="Join Team Washabelle" />
           <meta property="og:image" content={ogImage} />
-          <meta property="og:description" content="washabelle description" />
-          <meta property="og:site_name" content="washabelle site name" />
+          <meta property="og:description" content="Get access to promo materials, complete and convenient statistics and excellent customer service." />
+          <meta property="og:site_name" content="Washabelle Affiliate Program" />
           <meta property="og:locale" content="en_US" />
 
           <meta name="twitter:card" content="washabelle card" />
           <meta name="twitter:site" content="@washabelle" />
           <meta name="twitter:url" content="https://washabelle.com" />
-          <meta name="twitter:title" content="washabelle title" />
-          <meta name="twitter:description" content="washabelle description " />
+          <meta name="twitter:title" content="Washabelle Affiliate Program" />
+          <meta name="twitter:description" content="Get access to promo materials, complete and convenient statistics and excellent customer service." />
           <meta name="twitter:image" content={ogImage} />
 
           <script
