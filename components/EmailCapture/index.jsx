@@ -23,14 +23,15 @@ const Input = styled.input`
   outline: none;
   border-bottom: 2px dashed ${config.colors.purple};
   color: ${config.colors.black};
-  padding-bottom: 5px;
-  padding-top: 15px;
+  padding-bottom: 10px;
+  line-height: 30px;
   align-self: flex-end;
   transition: border-bottom 0.25s ease;
   background: transparent;
   -webkit-appearance: none;
   width: 80%;
   margin-right: 8px;
+  padding-right: 80px;
 
   &::placeholder {
     color: ${config.colors.black};
