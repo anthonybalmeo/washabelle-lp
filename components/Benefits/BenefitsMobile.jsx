@@ -41,8 +41,10 @@ const BenefitsComponentImageContainer = styled.div`
   }
 `
 
-const BenefitsComponentImage = styled.div`
-  padding: 1rem;
+const BenefitsComponentImage = styled.img`
+  width: 100%;
+  max-height: 54px;
+  margin: 1rem;
 `
 
 const BenefitsComponentCopyContainer = styled.div`
@@ -55,7 +57,7 @@ export const BenefitsMobile = (props) =>
     props.BenefitsFixture.map(({ copy, image }, i) => (
       <BenefitsComponentListItem key={i}>
         <BenefitsComponentImageContainer>
-          <BenefitsComponentImage><FontAwesomeIcon icon={faAdjust} size='2x' /></BenefitsComponentImage>
+          <BenefitsComponentImage src={image} />
         </BenefitsComponentImageContainer>
         <BenefitsComponentCopyContainer>
           <p>{copy}</p>

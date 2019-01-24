@@ -4,23 +4,27 @@ import styled from 'styled-components'
 import { MobileAndTablet, Desktop } from '../MediaQueries'
 import { BenefitsMobile } from './BenefitsMobile'
 import { BenefitsDesktop } from './BenefitsDesktop'
+import machine from './ico_machine.png'
+import trophy from './ico_trophy.png'
+import money from './ico_money.png'
+import badge from './ico_badge.png'
 
 const BenefitsFixture = [
   {
     copy: 'Enjoy our "First Touch Cookie" attribution model. The First Touch model gives 100% of the credit to the marketing effort that drove a visitor to purchase as washabelle.com tracking back 120 days.',
-    image: 'svg',
+    image: trophy,
   },
   {
     copy: 'Receive commission payments twice a month, upon reaching a minimum threshold, through PayPal.',
-    image: 'svg',
+    image: money,
   },
   {
     copy: 'Experience a speedy sign-up process. Membership to Team Washabelle is exclusive offered to pre-approved influencers. Since you are pre-approved, it only takes a couple of minutes to get started!',
-    image: 'svg',
+    image: badge,
   },
   {
     copy: 'You have exclusive promotional rights to one of the world’s first machine washabelle mattress.',
-    image: 'svg',
+    image: machine,
   },
 ]
 
