@@ -16,6 +16,12 @@ const FooterEnd = styled.footer`
   text-align: center;
   padding: 2rem 0;
 `
+const FooterLinksListHeader = styled.h5`
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 24px;
+`
+
 const FooterLinksList = styled.ul`
   display: flex;
   flex-direction: column;
@@ -23,10 +29,13 @@ const FooterLinksList = styled.ul`
 
 const FooterLinksListItems = styled.li`
   flex: 1 1;
+  margin-bottom: 20px;
   > a {
     color: ${config.colors.black};
-    text-decoration: none;
     line-height: 2.5;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
   }
 `
 
@@ -47,6 +56,17 @@ const SocialListItem = styled.li`
 
 const SocialLinks = styled.a`
   color: ${config.colors.purple};
+`
+
+const FooterTitle = styled.h3`
+  margin-bottom: 12px;
+  margin-top: 28px;
+  font-size: 20px;
+  line-height: 27px;
+`
+const FooterCopy = styled.p`
+  font-size: 18px;
+  line-height: 24px;
 `
 
 const FooterComponentContainer = styled.div`
@@ -72,7 +92,7 @@ const FooterComponentColumn = styled.div`
     flex: 1 1;
 
     &:first-child {
-      flex: 1 1 20%;
+      flex: 1 1 15%;
     }
   }
 `
@@ -89,8 +109,8 @@ export class Footer extends React.Component {
           <FooterComponentContainer>
             <FooterComponentColumn>
               <FooterIcon src={logo} />
-              <h3>Let’s keep in touch</h3>
-              <p>Sign up for our newsletter for <br /> product launches and news</p>
+              <FooterTitle>Let’s keep in touch</FooterTitle>
+              <FooterCopy>Sign up for our newsletter for <br /> product launches and news</FooterCopy>
               <EmailCapture />
 
               { /* SOCIAL ICONS */ }
@@ -103,18 +123,27 @@ export class Footer extends React.Component {
               </SocialList>
             </FooterComponentColumn>
             <FooterComponentColumn>
-              <h4>Affilliates Programs</h4>
+              <FooterLinksListHeader>Shop Mattresses</FooterLinksListHeader>
               <FooterLinksList>
-                <FooterLinksListItems><a href='#'>Frequently asked Questions</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Manual</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Win a free mattress</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Shop Kids</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Shop Adults</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Shop Pets</a></FooterLinksListItems>
               </FooterLinksList>
             </FooterComponentColumn>
             <FooterComponentColumn>
-              <h4>Contact Us</h4>
+              <FooterLinksListHeader>Learn More</FooterLinksListHeader>
               <FooterLinksList>
-                <FooterLinksListItems><a href='#'>support@washabelle</a></FooterLinksListItems>
-                <FooterLinksListItems><a href='#'>Contact Form</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>About Us</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Reviews</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Frequently Asked Questions</a></FooterLinksListItems>
+              </FooterLinksList>
+            </FooterComponentColumn>
+            <FooterComponentColumn>
+              <FooterLinksListHeader>Warranties</FooterLinksListHeader>
+              <FooterLinksList>
+                <FooterLinksListItems><a href='#'>101 night sleep guarantee</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Our 10 year warranty</a></FooterLinksListItems>
+                <FooterLinksListItems><a href='#'>Shipping and returns</a></FooterLinksListItems>
               </FooterLinksList>
             </FooterComponentColumn>
           </FooterComponentContainer>
