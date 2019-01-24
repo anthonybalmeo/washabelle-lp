@@ -45,11 +45,11 @@ export default () =>
   }
 
   .section-container {
-    max-width: 1024px;
+    max-width: 1160px;
     margin: 0 auto;
   }
 
-  p {
+  p, h1, h2, h3, h4, h5, h6 {
     margin: 0;
   }
 
@@ -62,6 +62,14 @@ export default () =>
 
   hr {
     border-top: 1px solid ${config.colors.purple};
+    margin: 20px 0;
+  }
+
+  .section-title {
+    color: ${config.colors.purple};
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 2rem;
   }
 
   * {

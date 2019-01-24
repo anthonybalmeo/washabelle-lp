@@ -5,6 +5,7 @@ import { config } from '../config'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faInstagram, faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+import logo from '../assets/washabelle-icon.png'
 
 const FooterComponent = styled.footer`
   background-color: ${config.colors.gray};
@@ -33,7 +34,7 @@ const SocialList = styled.ul`
   display: flex;
   flex-direction: row;
   margin: 3rem auto 2rem;
-  max-width: 320px;
+  max-width: 230px;
 
   @media (min-width: 600px) {
     margin: 0;
@@ -76,6 +77,10 @@ const FooterComponentColumn = styled.div`
   }
 `
 
+const FooterIcon = styled.img`
+  width: 48px;
+`
+
 export class Footer extends React.Component {
   render() {
     return (
@@ -83,6 +88,7 @@ export class Footer extends React.Component {
         <div className='section-container'>
           <FooterComponentContainer>
             <FooterComponentColumn>
+              <FooterIcon src={logo} />
               <h3>Let’s keep in touch</h3>
               <p>Sign up for our newsletter for <br /> product launches and news</p>
               <EmailCapture />

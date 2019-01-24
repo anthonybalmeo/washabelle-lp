@@ -1,10 +1,10 @@
 import styled from 'styled-components'
-import logo from '../assets/washabelle-logo.svg'
+import logo from '../assets/header-logo.png'
 import { TabletAndDesktop, Mobile, Desktop } from './MediaQueries'
 import { config } from '../config'
 
 const Logo = styled.img`
-  height: 24px;
+  height: 36px;
   cursor: pointer;
 `
 
@@ -36,8 +36,8 @@ const HeaderStyles = styled.header`
   align-items: center;
   justify-content: space-between;
   display: flex;
-  padding: 20px;
-  z-index: 99;
+  padding: 22px;
+  z-index: 999;
 `
 
 export const Header = () =>

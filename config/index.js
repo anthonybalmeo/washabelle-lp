@@ -4,6 +4,6 @@ export const config = {
     blue: '#194795',
     white: '#FFFFFF',
     gray: '#FAFAFA',
-    black: '#1F1F1F',
+    black: '#404040',
   },
 }

@@ -5,7 +5,6 @@ import placeholder from '../../assets/placeholder-square.jpg'
 
 const AffiliatesComponent = styled.section`
   background: ${config.colors.white};
-  margin-top: 64px;
 `
 const Quote = styled.div`
   font-size: 2rem;
@@ -95,7 +94,7 @@ const AffiliatesFixture = [
 export const Affiliates = () =>
   <React.Fragment>
     <AffiliatesComponent>
-      <h5>What our affiliates say about us</h5>
+      <h5 class='section-title'>What our affiliates say about us</h5>
       <AffiliatesList>
       {
         AffiliatesFixture.map(({copy, link, image}, i) =>

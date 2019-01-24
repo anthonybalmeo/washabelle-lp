@@ -13,14 +13,10 @@ const BenefitsComponentList = styled.ul`
 
 const BenefitsComponentListItem = styled.li`
   flex: 1 1;
-  margin: 1rem 0;
+  margin: 1rem;
   margin-right: 1rem;
   box-shadow: 0px 3px 10px ${config.colors.gray};
   border: 1px solid ${config.colors.black};
-
-  &:last-child {
-    margin-right: 0;
-  }
 `
 const BenefitsComponentImageContainer = styled.div`
   background: ${config.colors.purple};
@@ -43,8 +39,10 @@ const BenefitsComponentImageContainer = styled.div`
 
 const BenefitsComponentImage = styled.img`
   width: 100%;
-  max-height: 54px;
-  margin: 1rem;
+  max-width: 72px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3125rem;
 `
 
 const BenefitsComponentCopyContainer = styled.div`

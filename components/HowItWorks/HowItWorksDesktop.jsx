@@ -6,16 +6,33 @@ const HowItWorksList = styled.ul`
   display: flex;
   flex-direction: row;
   text-align: center;
+  margin-bottom: 4.375rem;
 `
 
 const HowItWorksListItem = styled.li`
   flex: 1 1;
-  margin: 1rem;
+  margin: 0rem 1rem;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    max-width: 270px;
+    border-top: 1px dashed ${config.colors.black};
+    transform: translate(60px,30px);
+    width: 100%;
+  }
+
+  &:last-child {
+    &:before {
+      border-top: 0;
+    }
+  }
 `
 
 const HowItWorksNumber = styled.div`
   flex: 1 1;
   font-size: 2rem;
+  margin-bottom: 23px;
 
   span {
     display: block;
@@ -27,6 +44,16 @@ const HowItWorksNumber = styled.div`
   }
 `
 
+const HowItWorksTitle = styled.h3`
+  font-size: 20px;
+  line-height: 27px;
+  margin-bottom: 10px;
+`
+const HowItWorksCopy = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+`
+
 export const HowItWorksDesktop = (props) =>
   <HowItWorksList>
   {
@@ -35,8 +62,8 @@ export const HowItWorksDesktop = (props) =>
         <HowItWorksNumber>
           <span>{i+1}</span>
         </HowItWorksNumber>
-        <h3>{title}</h3>
-        <p>{copy}</p>
+        <HowItWorksTitle>{title}</HowItWorksTitle>
+        <HowItWorksCopy>{copy}</HowItWorksCopy>
       </HowItWorksListItem>
     ))
   }

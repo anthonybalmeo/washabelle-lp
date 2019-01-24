@@ -1,8 +1,6 @@
 import React from 'react'
 import { config } from '../../config'
 import styled from 'styled-components'
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faAdjust } from '@fortawesome/free-solid-svg-icons'
 
 const BenefitsComponentList = styled.ul`
   display: flex;
@@ -12,11 +10,11 @@ const BenefitsComponentList = styled.ul`
 `
 
 const BenefitsComponentListItem = styled.li`
+  box-shadow: 0 0 20px 0 rgba(213, 213, 213, 50);
   flex: 1 1;
+  height: 350px;
   margin: 1rem 0;
   margin-right: 1rem;
-  box-shadow: 0px 3px 10px ${config.colors.gray};
-  border: 1px solid ${config.colors.black};
 
   &:last-child {
     margin-right: 0;
@@ -45,12 +43,18 @@ const BenefitsComponentCopyContainer = styled.div`
   background: ${config.colors.white};
 `
 
+const BenefitsCopy = styled.p`
+  font-size: 16px;
+  line-height: 24px;
+  margin: 1rem 1.5rem 0;
+`
+
 const BenefitsComponentImage = styled.img`
-  height: 100%;
-  max-height: 50px;
-  margin-left: 17px;
-  margin-top: 22px;
-  margin-bottom: 15px;
+  width: 100%;
+  max-width: 72px;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.3125rem;
 `
 
 export const BenefitsDesktop = (props) =>
@@ -62,7 +66,7 @@ export const BenefitsDesktop = (props) =>
           <BenefitsComponentImage src={image} />
         </BenefitsComponentImageContainer>
         <BenefitsComponentCopyContainer>
-          <p>{copy}</p>
+          <BenefitsCopy>{copy}</BenefitsCopy>
         </BenefitsComponentCopyContainer>
       </BenefitsComponentListItem>
     ))

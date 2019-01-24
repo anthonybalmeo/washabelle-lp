@@ -4,10 +4,10 @@ import styled from 'styled-components'
 import { MobileAndTablet, Desktop } from '../MediaQueries'
 import { BenefitsMobile } from './BenefitsMobile'
 import { BenefitsDesktop } from './BenefitsDesktop'
-import machine from './ico_machine.png'
-import trophy from './ico_trophy.png'
-import money from './ico_money.png'
-import badge from './ico_badge.png'
+import machine from './icon-machine.png'
+import trophy from './icon-trophy.png'
+import money from './icon-money.png'
+import badge from './icon-badge.png'
 
 const BenefitsFixture = [
   {
@@ -30,34 +30,37 @@ const BenefitsFixture = [
 
 const BenefitsComponent = styled.section`
 `
+const BenefitsSectionTitle = styled.h5`
+  color: ${config.colors.purple};
+  font-size: 14px;
+  line-height: 19px;
+  margin-bottom: 2rem;
+`
 
-const BenefitsButton = styled.button`
-  font-family: 'Sweetlife Medium';
-  border-radius: 3px;
-  background: ${config.colors.blue};
-  color: white;
-  height: 32px;
-  line-height: 36px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  outline: none;
-  border: none;
-  cursor: pointer;
-  padding: 0 4rem;
-  margin: 0 auto;
+const BenefitsButton = styled.a`
   display: block;
+  font-size: 20px;
+  line-height: 27px;
+  margin: 20px auto 60px;
+  padding: 0.75rem 0;
+  width: 212px;
+  background-color: ${config.colors.blue};
+  color: ${config.colors.white};
+  border-radius: 3px;
+  text-decoration: none;
+  text-align: center;
 `
 
 export const Benefits = () =>
   <React.Fragment>
     <BenefitsComponent>
-      <h5>Benefits</h5>
+      <h5 class='section-title'>Benefits</h5>
       <MobileAndTablet>
         <BenefitsMobile BenefitsFixture={BenefitsFixture} />
       </MobileAndTablet>
       <Desktop>
         <BenefitsDesktop BenefitsFixture={BenefitsFixture} />
       </Desktop>
-      <BenefitsButton>Sign Up</BenefitsButton>
+      <BenefitsButton href='#'>Sign Up</BenefitsButton>
     </BenefitsComponent>
   </React.Fragment>
