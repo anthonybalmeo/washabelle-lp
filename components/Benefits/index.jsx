@@ -43,6 +43,6 @@ export const Benefits = () =>
       <Desktop>
         <BenefitsDesktop BenefitsFixture={BenefitsFixture} />
       </Desktop>
-      <BlueButton top={20} bottom={60} href='#'>Sign Up</BlueButton>
+      <BlueButton top={20} bottom={60} href='https://washabelle.com/'>Sign Up</BlueButton>
     </BenefitsComponent>
   </React.Fragment>

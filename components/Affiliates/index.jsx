@@ -156,10 +156,10 @@ export const Affiliates = () =>
       }
       </AffiliatesList>
       <MobileAndTablet>
-        <BlueButton top={0} bottom={80} href='#'>Sign Up</BlueButton>
+        <BlueButton top={0} bottom={80} href='https://washabelle.com/'>Sign Up</BlueButton>
       </MobileAndTablet>
       <Desktop>
-        <BlueButton top={60} bottom={80} href='#'>Sign Up</BlueButton>
+        <BlueButton top={60} bottom={80} href='https://washabelle.com/'>Sign Up</BlueButton>
       </Desktop>
     </AffiliatesComponent>
   </React.Fragment>

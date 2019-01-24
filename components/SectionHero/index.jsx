@@ -68,7 +68,7 @@ export const SectionHero = () =>
               <HeroIcon src={headerLogo} />
             </Desktop>
             <HeroTitle>Washabelle Affiliate&nbsp;Program</HeroTitle>
-            <PurpleButton bottom={60} href='#'>Join Now</PurpleButton>
+            <PurpleButton bottom={60} href='https://washabelle.com/'>Join Now</PurpleButton>
           </HeroColumn>
           <HeroColumn>
             <HeroImage src={sectionHero} />
