@@ -52,6 +52,8 @@ const HowItWorksTitle = styled.h3`
 const HowItWorksCopy = styled.p`
   font-size: 16px;
   line-height: 24px;
+  margin: 0 auto;
+  max-width: 330px;
 `
 
 export const HowItWorksDesktop = (props) =>

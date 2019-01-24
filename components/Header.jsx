@@ -44,7 +44,7 @@ export const Header = () =>
   <HeaderStyles>
     <Logo src={logo} onClick={() => window.location = 'https://washabelle.com/'} />
 
-    <TabletAndDesktop>
+    {/* <TabletAndDesktop>
       <LinkWrapper>
         <Desktop>
           <A href="#">FAQs</A>
@@ -56,7 +56,7 @@ export const Header = () =>
         </Desktop>
       </LinkWrapper>
 
-    </TabletAndDesktop>
+    </TabletAndDesktop> */}
 
     <Mobile>
     </Mobile>
