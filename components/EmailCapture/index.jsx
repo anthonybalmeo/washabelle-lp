@@ -53,7 +53,11 @@ const Button = styled.button`
   padding: 0 12px;
   position: absolute;
   top: 0;
-  right: 73px;
+  right: 43px;
+
+  @media only screen and (min-width: 1100px) {
+    right: 73px;
+  }
 `
 
 const InputWrapper = styled.div`
@@ -62,7 +66,7 @@ const InputWrapper = styled.div`
   width: 90%;
   max-width: 470px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1100px) {
     margin: 2rem 0;
   }
 `

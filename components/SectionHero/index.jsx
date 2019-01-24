@@ -3,7 +3,7 @@ import { config } from '../../config'
 import styled from 'styled-components'
 import sectionHero from './section-hero.jpg'
 import headerLogo from '../../assets/washabelle-icon.png'
-
+import { Desktop } from '../MediaQueries'
 const SectionHeroComponent = styled.section`
   background: ${config.colors.white};
   margin-top: 136px;
@@ -13,7 +13,12 @@ const HeroContainer = styled.div`
   align-items: stretch;
   display: flex;
   flex-direction: column;
-  @media only screen and (min-width: 600px) {
+  margin: 0 auto;
+  max-width: 320px;
+  width: 100%;
+
+  @media only screen and (min-width: 1100px) {
+    max-width: none;
     flex-direction: row;
   }
 `
@@ -45,9 +50,15 @@ const HeroIcon = styled.img`
 `
 
 const HeroTitle = styled.h1`
-  font-size: 36px;
-  line-height: 49px;
-  margin: 20px auto 40px;
+  font-size: 24px;
+  line-height: 29px;
+  margin: 0 auto 40px;
+
+  @media only screen and (min-width: 1100px) {
+    font-size: 36px;
+    line-height: 49px;
+    margin: 20px auto 40px;
+  }
 `
 const HeroButton = styled.a`
   font-family: 'Decour Soft Bold';
@@ -70,7 +81,9 @@ export const SectionHero = () =>
       <div className='section-container'>
         <HeroContainer>
           <HeroColumn>
-            <HeroIcon src={headerLogo} />
+            <Desktop>
+              <HeroIcon src={headerLogo} />
+            </Desktop>
             <HeroTitle>Washabelle Affiliate&nbsp;Program</HeroTitle>
             <HeroButton href='#'>Join Now</HeroButton>
           </HeroColumn>

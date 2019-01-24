@@ -69,7 +69,7 @@ export default () =>
   hr {
     border-top: 1px solid ${config.colors.purple};
     margin: 20px auto;
-    width: 65%;
+    width: 320px;
 
     @media only screen and (min-width: 1100px) {
       width: 100%;
@@ -80,7 +80,7 @@ export default () =>
     color: ${config.colors.purple};
     font-size: 14px;
     line-height: 19px;
-    max-width: 280px;
+    max-width: 320px;
     margin: 1rem auto 1rem;
     width: 100%;
 

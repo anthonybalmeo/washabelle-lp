@@ -10,9 +10,9 @@ const BenefitsComponentList = styled.ul`
 `
 
 const BenefitsComponentListItem = styled.li`
-  box-shadow: 0 0 20px 0 rgba(213, 213, 213, 50);
+  box-shadow: 0 0 1.25rem 0 rgba(213, 213, 213, 50);
   flex: 1 1;
-  height: 350px;
+  height: 21.875rem;
   margin: 1rem 0;
   margin-right: 1rem;
 
@@ -23,18 +23,18 @@ const BenefitsComponentListItem = styled.li`
 const BenefitsComponentImageContainer = styled.div`
   background: ${config.colors.purple};
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   text-align: left;
 
   &:after {
     content: '';
-    display: block;
-    position: relative;
-    height: 14px;
     background: radial-gradient(ellipse at center, rgba(255,255,255,0) 0%,rgba(255,255,255,0) 60%,rgba(255,255,255,1) 70%,rgba(255,255,255,1) 100%), ${config.colors.purple};
+    background-position: -0.3625rem -1rem;
     background-repeat: repeat-x;
-    background-size: 31px 30px;
-    background-position: -1px -16px;
+    background-size: 2.0375rem 1.875rem;
+    display: block;
+    height: 0.875rem;
+    position: relative;
     z-index: 3;
   }
 `
@@ -44,17 +44,17 @@ const BenefitsComponentCopyContainer = styled.div`
 `
 
 const BenefitsCopy = styled.p`
-  font-size: 16px;
-  line-height: 24px;
+  font-size: 1rem;
+  line-height: 1.5rem;
   margin: 1rem 1.5rem 0;
 `
 
 const BenefitsComponentImage = styled.img`
-  width: 100%;
-  max-width: 72px;
+  margin-bottom: 0.3125rem;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-  margin-bottom: 0.3125rem;
+  max-width: 4.5rem;
+  width: 100%;
 `
 
 export const BenefitsDesktop = (props) =>

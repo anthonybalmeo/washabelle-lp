@@ -30,24 +30,17 @@ const BenefitsFixture = [
 
 const BenefitsComponent = styled.section`
 `
-const BenefitsSectionTitle = styled.h5`
-  color: ${config.colors.purple};
-  font-size: 14px;
-  line-height: 19px;
-  margin-bottom: 2rem;
-`
-
 const BenefitsButton = styled.a`
   font-family: 'Decour Soft Bold';
   display: block;
-  font-size: 20px;
-  line-height: 27px;
-  margin: 20px auto 60px;
+  font-size: 1.25rem;
+  line-height: 1.6875rem;
+  margin: 1.25rem auto 3.75rem;
   padding: 0.75rem 0;
-  width: 212px;
+  width: 13.25rem;
   background-color: ${config.colors.blue};
   color: ${config.colors.white};
-  border-radius: 3px;
+  border-radius: 0.1875rem;
   text-decoration: none;
   text-align: center;
 `

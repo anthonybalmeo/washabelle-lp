@@ -45,7 +45,7 @@ const SocialList = styled.ul`
   margin: 3rem auto 2rem;
   max-width: 230px;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1100px) {
     margin: 0;
   }
 `
@@ -75,20 +75,16 @@ const FooterComponentContainer = styled.div`
   padding: 2rem 1rem;
   text-align: center;
   
-  @media (min-width: 600px) {
+  @media (min-width: 1100px) {
     padding: 4rem 1rem;
     flex-direction: row;
     text-align: left;
-  }
-
-  @media (min-width: 1100px) {
-    padding: 4rem 0;
   }
 `
 const FooterComponentColumn = styled.div`
   flex: 1 1;
 
-  @media (min-width: 600px) {
+  @media (min-width: 1100px) {
     flex: 1 1;
 
     &:first-child {

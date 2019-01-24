@@ -8,7 +8,7 @@ const Logo = styled.img`
   cursor: pointer;
   margin: 0 auto;
 
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 1100px) {
     margin: 0;
   }
 `
