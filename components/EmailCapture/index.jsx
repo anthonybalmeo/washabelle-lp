@@ -1,10 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
-
-import asterisk from './asterisk.svg'
-
 import MailchimpSubscribe from "react-mailchimp-subscribe"
-import { config } from '../../config';
+import asterisk from './asterisk.svg'
+import config from '../../config';
 
 // mailchimp on account to create a new list send over u & i
 const url = "//sweetgreen.us5.list-manage.com/subscribe/post?u=935cde8faa405d2d908226449&amp;id=e1d0c747e3";
@@ -93,15 +91,16 @@ const FreshWrap = styled.div`
   }
 `
 
-const Fresh = ({ className }) =>
+const Fresh = ({ className }) => (
   <FreshWrap className={className}>
     <Paragraph>
       <Asterisk src={asterisk} alt="" />
       Fresh! We’ll reach out to you asap.
     </Paragraph>
   </FreshWrap>
+)
 
-export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
+const EmailCapture = ({ inputStyle = {}, freshClass }) => (
   <MailchimpSubscribe
     url={url}
     render={({ subscribe, status, message }) => {
@@ -110,7 +109,8 @@ export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
         <form onSubmit={async e => {
           e.preventDefault();
           subscribe({ EMAIL: email });
-        }}>
+        }}
+        >
           {
             status === "success" || status === 'error' ?
               <Fresh className={freshClass} /> :
@@ -121,6 +121,9 @@ export const EmailCapture = ({ inputStyle = {}, freshClass }) =>
                 </InputWrapper>
               )
           }
-        </form>)
+        </form>
+      )
     }}
   />
+)
+export default EmailCapture

@@ -1,6 +1,7 @@
+import React from 'react'
 import styled from 'styled-components'
 import logo from '../assets/header-logo.png'
-import { config } from '../config'
+import config from '../config'
 
 const Logo = styled.img`
   height: 2.25rem;
@@ -44,10 +45,9 @@ const HeaderStyles = styled.header`
   z-index: 999;
 `
 
-export const Header = () =>
+const Header = () => (
   <HeaderStyles>
     <Logo src={logo} onClick={() => window.location = 'https://washabelle.com/'} />
-
     {/* <TabletAndDesktop>
       <LinkWrapper>
         <Desktop>
@@ -62,3 +62,6 @@ export const Header = () =>
 
     </TabletAndDesktop> */}
   </HeaderStyles>
+)
+
+export default Header

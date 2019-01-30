@@ -1,6 +1,6 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 
 const BenefitsComponentList = styled.ul`
   display: flex;
@@ -57,11 +57,11 @@ const BenefitsComponentImage = styled.img`
   width: 100%;
 `
 
-export const BenefitsDesktop = (props) =>
+const BenefitsDesktop = ({ BenefitsFixture }) => (
   <BenefitsComponentList>
-  {
-    props.BenefitsFixture.map(({ copy, image }, i) => (
-      <BenefitsComponentListItem key={i}>
+    {
+    BenefitsFixture.map(({ id, copy, image }) => (
+      <BenefitsComponentListItem key={id}>
         <BenefitsComponentImageContainer>
           <BenefitsComponentImage src={image} />
         </BenefitsComponentImageContainer>
@@ -71,4 +71,7 @@ export const BenefitsDesktop = (props) =>
       </BenefitsComponentListItem>
     ))
   }
-</BenefitsComponentList>
+  </BenefitsComponentList>
+)
+
+export default BenefitsDesktop

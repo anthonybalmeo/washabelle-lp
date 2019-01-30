@@ -1,6 +1,6 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 
 const BenefitsComponentList = styled.ul`
   display: flex;
@@ -56,18 +56,21 @@ const BenefitsComponentCopyContainer = styled.div`
   background: ${config.colors.white};
 `
 
-export const BenefitsMobile = (props) =>
+const BenefitsMobile = ({ BenefitsFixture }) => (
   <BenefitsComponentList>
-  {
-    props.BenefitsFixture.map(({ copy, image }, i) => (
-      <BenefitsComponentListItem key={i}>
-        <BenefitsComponentImageContainer>
-          <BenefitsComponentImage src={image} />
-        </BenefitsComponentImageContainer>
-        <BenefitsComponentCopyContainer>
-          <BenefitsCopy>{copy}</BenefitsCopy>
-        </BenefitsComponentCopyContainer>
-      </BenefitsComponentListItem>
-    ))
-  }
-</BenefitsComponentList>
+    {
+      BenefitsFixture.map(({ id, copy, image }) => (
+        <BenefitsComponentListItem key={id}>
+          <BenefitsComponentImageContainer>
+            <BenefitsComponentImage src={image} />
+          </BenefitsComponentImageContainer>
+          <BenefitsComponentCopyContainer>
+            <BenefitsCopy>{copy}</BenefitsCopy>
+          </BenefitsComponentCopyContainer>
+        </BenefitsComponentListItem>
+      ))
+    }
+  </BenefitsComponentList>
+)
+
+export default BenefitsMobile

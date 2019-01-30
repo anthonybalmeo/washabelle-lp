@@ -1,6 +1,6 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 
 const HowItWorksList = styled.ul`
   display: flex;
@@ -41,19 +41,22 @@ const HowItWorksContainer = styled.div`
   max-width: 20rem;
 `
 
-export const HowItWorksMobile = (props) =>
+const HowItWorksMobile = ({ howItWorksFixture }) => (
   <HowItWorksList>
-  {
-    props.howItWorksFixture.map(({ title, copy }, i) => (
-      <HowItWorksListItem key={i}>
-        <HowItWorksContainer>
-          <HowItWorksNumber>
-            <span>{i+1}</span>
-          </HowItWorksNumber>
-          <HowItWorksTitle>{title}</HowItWorksTitle>
-          <HowItWorksCopy>{copy}</HowItWorksCopy>
-        </HowItWorksContainer>
-      </HowItWorksListItem>
-    ))
-  }
+    {
+      howItWorksFixture.map(({ id, title, copy }) => (
+        <HowItWorksListItem key={id}>
+          <HowItWorksContainer>
+            <HowItWorksNumber>
+              <span>{id}</span>
+            </HowItWorksNumber>
+            <HowItWorksTitle>{title}</HowItWorksTitle>
+            <HowItWorksCopy>{copy}</HowItWorksCopy>
+          </HowItWorksContainer>
+        </HowItWorksListItem>
+      ))
+    }
   </HowItWorksList>
+)
+
+export default HowItWorksMobile

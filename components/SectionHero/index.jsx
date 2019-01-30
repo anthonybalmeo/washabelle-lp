@@ -1,10 +1,11 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 import sectionHero from './section-hero.jpg'
 import headerLogo from '../../assets/washabelle-icon.png'
 import { Desktop } from '../MediaQueries'
 import { PurpleButton } from '../Button'
+
 const SectionHeroComponent = styled.section`
   background: ${config.colors.white};
   margin-top: 136px;
@@ -58,22 +59,23 @@ const HeroTitle = styled.h1`
   }
 `
 
-export const SectionHero = () =>
-  <React.Fragment>
-    <SectionHeroComponent>
-      <div className='section-container'>
-        <HeroContainer>
-          <HeroColumn>
-            <Desktop>
-              <HeroIcon src={headerLogo} />
-            </Desktop>
-            <HeroTitle>Washabelle Affiliate&nbsp;Program</HeroTitle>
-            <PurpleButton bottom={60} href='https://washabelle.com/'>Join Now</PurpleButton>
-          </HeroColumn>
-          <HeroColumn>
-            <HeroImage src={sectionHero} />
-          </HeroColumn>
-        </HeroContainer>
-      </div>
-    </SectionHeroComponent>
-  </React.Fragment>
+const SectionHero = () => (
+  <SectionHeroComponent>
+    <div className='section-container'>
+      <HeroContainer>
+        <HeroColumn>
+          <Desktop>
+            <HeroIcon src={headerLogo} />
+          </Desktop>
+          <HeroTitle>Washabelle Affiliate&nbsp;Program</HeroTitle>
+          <PurpleButton bottom={60} href='https://washabelle.com/'>Join Now</PurpleButton>
+        </HeroColumn>
+        <HeroColumn>
+          <HeroImage src={sectionHero} />
+        </HeroColumn>
+      </HeroContainer>
+    </div>
+  </SectionHeroComponent>
+)
+
+export default SectionHero

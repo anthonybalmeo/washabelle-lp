@@ -1,6 +1,6 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 
 const HowItWorksList = styled.ul`
   display: flex;
@@ -52,17 +52,20 @@ const HowItWorksCopy = styled.p`
   max-width: 20.625rem;
 `
 
-export const HowItWorksDesktop = (props) =>
+const HowItWorksDesktop = ({ howItWorksFixture }) => (
   <HowItWorksList>
-  {
-    props.howItWorksFixture.map(({ title, copy }, i) => (
-      <HowItWorksListItem key={i}>
-        <HowItWorksNumber>
-          <span>{i+1}</span>
-        </HowItWorksNumber>
-        <HowItWorksTitle>{title}</HowItWorksTitle>
-        <HowItWorksCopy>{copy}</HowItWorksCopy>
-      </HowItWorksListItem>
-    ))
-  }
+    {
+      howItWorksFixture.map(({ id, title, copy }) => (
+        <HowItWorksListItem key={id}>
+          <HowItWorksNumber>
+            <span>{id}</span>
+          </HowItWorksNumber>
+          <HowItWorksTitle>{title}</HowItWorksTitle>
+          <HowItWorksCopy>{copy}</HowItWorksCopy>
+        </HowItWorksListItem>
+      ))
+    }
   </HowItWorksList>
+  )
+
+export default HowItWorksDesktop

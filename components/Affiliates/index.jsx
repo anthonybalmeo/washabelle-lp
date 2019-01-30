@@ -1,6 +1,6 @@
 import React from 'react'
-import { config } from '../../config'
 import styled from 'styled-components'
+import config from '../../config'
 import { BlueButton } from '../Button'
 import { MobileAndTablet, Desktop } from '../MediaQueries'
 import affiliat1 from './affiliate-1.jpg'
@@ -9,6 +9,7 @@ import affiliat3 from './affiliate-3.jpg'
 
 const AffiliatesFixture = [
   {
+    id: 1,
     copy: null,
     image: {
       url: affiliat1,
@@ -17,6 +18,7 @@ const AffiliatesFixture = [
     },
   },
   {
+    id: 2,
     copy: 'Washabelle is the first and only machine washable mattress so my followers are excited to hear about this revolutionary product. And it’s nice to make money just by sharing Washabelle’s fantastic content.',
     link: {
       text: 'Love that max blog',
@@ -25,6 +27,7 @@ const AffiliatesFixture = [
     image: null,
   },
   {
+    id: 3,
     copy: null,
     image: {
       url: affiliat2,
@@ -33,6 +36,7 @@ const AffiliatesFixture = [
     },
   },
   {
+    id: 4,
     copy: 'Thanks to Team washabelle I can recommend the only machine washable dryable mattress out there while monetizing my blog. Selling a great product gives you great results!',
     link: {
       text: 'Love that max blog',
@@ -41,6 +45,7 @@ const AffiliatesFixture = [
     image: null,
   },
   {
+    id: 5,
     copy: null,
     image: {
       url: affiliat3,
@@ -49,6 +54,7 @@ const AffiliatesFixture = [
     },
   },
   {
+    id: 6, 
     copy: 'Washabelle is the first and only machine washable mattress so my followers are excited to hear about this revolutionary product. And it’s nice to make money just by sharing Washabelle’s fantastic content.',
     link: {
       text: 'Love that max blog',
@@ -128,30 +134,32 @@ const AffiliateImageDescription = styled.div`
   padding: 1rem;
 `
 
-export const Affiliates = () =>
-  <React.Fragment>
+const Affiliates = () =>
+  (
     <AffiliatesComponent>
       <h5 className='section-title'>What our affiliates say about us</h5>
       <AffiliatesList>
-      {
-        AffiliatesFixture.map(({copy, link, image}, i) =>
-          <AffiliatesListItem key={i}>
-            {
-              copy && (
-              <AffiliatesQuoteContainer>
-                <Quote>“</Quote>
-                <QuoteCopy>{copy}</QuoteCopy>
-                <QuoteLink href={link.url}>{link.text}</QuoteLink>
-              </AffiliatesQuoteContainer>
-              )
-              }
-            { image && (
-              <React.Fragment>
-                <AffiliatesImage src={image.url} />
-                <AffiliateImageDescription>{image.description}</AffiliateImageDescription>
-              </React.Fragment>
-            ) }
-          </AffiliatesListItem>
+        {
+        AffiliatesFixture.map(({id, copy, link, image}) =>
+          (
+            <AffiliatesListItem key={id}>
+              {
+                copy && (
+                <AffiliatesQuoteContainer>
+                  <Quote>“</Quote>
+                  <QuoteCopy>{copy}</QuoteCopy>
+                  <QuoteLink href={link.url}>{link.text}</QuoteLink>
+                </AffiliatesQuoteContainer>
+                )
+                }
+              { image && (
+                <React.Fragment>
+                  <AffiliatesImage src={image.url} />
+                  <AffiliateImageDescription>{image.description}</AffiliateImageDescription>
+                </React.Fragment>
+              ) }
+            </AffiliatesListItem>
+          )
         )
       }
       </AffiliatesList>
@@ -162,4 +170,7 @@ export const Affiliates = () =>
         <BlueButton top={60} bottom={80} href='https://washabelle.com/'>Sign Up</BlueButton>
       </Desktop>
     </AffiliatesComponent>
-  </React.Fragment>
+
+  )
+
+  export default Affiliates

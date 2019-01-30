@@ -1,11 +1,11 @@
 import React from 'react';
 import styled from 'styled-components'
-import { EmailCapture } from './EmailCapture'
-import { config } from '../config'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faFacebookF, faTwitter, faInstagram, faPinterestP } from '@fortawesome/free-brands-svg-icons'
 import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
 import logo from '../assets/washabelle-icon.png'
+import config from '../config'
+import EmailCapture from './EmailCapture'
 
 const FooterComponent = styled.footer`
   background-color: ${config.colors.gray};
@@ -93,57 +93,60 @@ const FooterIcon = styled.img`
   width: 3rem;
 `
 
-export class Footer extends React.Component {
-  render() {
-    return (
-      <FooterComponent>
-        <div className='section-container'>
-          <FooterComponentContainer>
-            <FooterComponentColumn>
-              <FooterIcon src={logo} />
-              <FooterTitle>Let’s keep in touch</FooterTitle>
-              <FooterCopy>Sign up for our newsletter for <br /> product launches and news</FooterCopy>
-              <EmailCapture />
+const Footer = () => (
+  <FooterComponent>
+    <div className='section-container'>
+      <FooterComponentContainer>
+        <FooterComponentColumn>
+          <FooterIcon src={logo} />
+          <FooterTitle>Let’s keep in touch</FooterTitle>
+          <FooterCopy>
+            Sign up for our newsletter for
+            <br />
+            product launches and news
+          </FooterCopy>
 
-              { /* SOCIAL ICONS */ }
-              <SocialList>
-                <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faFacebookF} size='1x'/></SocialLinks></SocialListItem>
-                <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faInstagram} size='lg'/></SocialLinks></SocialListItem>
-                <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faTwitter} size='lg'/></SocialLinks></SocialListItem>
-                <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faPinterestP} size='lg'/></SocialLinks></SocialListItem>
-                <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faEnvelope} size='lg'/></SocialLinks></SocialListItem>
-              </SocialList>
-            </FooterComponentColumn>
-            <FooterComponentColumn>
-              <FooterLinksListHeader>Shop Mattresses</FooterLinksListHeader>
-              <FooterLinksList>
-                <FooterLinksListItems><p><a href='#'>Shop Kids</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Shop Adults</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Shop Pets</a></p></FooterLinksListItems>
-              </FooterLinksList>
-            </FooterComponentColumn>
-            <FooterComponentColumn>
-              <FooterLinksListHeader>Learn More</FooterLinksListHeader>
-              <FooterLinksList>
-                <FooterLinksListItems><p><a href='#'>About Us</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Reviews</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Frequently Asked Questions</a></p></FooterLinksListItems>
-              </FooterLinksList>
-            </FooterComponentColumn>
-            <FooterComponentColumn>
-              <FooterLinksListHeader>Warranties</FooterLinksListHeader>
-              <FooterLinksList>
-                <FooterLinksListItems><p><a href='#'>101 night sleep guarantee</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Our 10 year warranty</a></p></FooterLinksListItems>
-                <FooterLinksListItems><p><a href='#'>Shipping and returns</a></p></FooterLinksListItems>
-              </FooterLinksList>
-            </FooterComponentColumn>
-          </FooterComponentContainer>
-        </div>
-        <FooterEnd>
-            2018 Washabelle All Rights Reserved
-        </FooterEnd>
-      </FooterComponent>
-      )
-  }
-}
+          <EmailCapture />
+
+          { /* SOCIAL ICONS */ }
+          <SocialList>
+            <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faFacebookF} size='1x' /></SocialLinks></SocialListItem>
+            <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faInstagram} size='lg' /></SocialLinks></SocialListItem>
+            <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faTwitter} size='lg' /></SocialLinks></SocialListItem>
+            <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faPinterestP} size='lg' /></SocialLinks></SocialListItem>
+            <SocialListItem><SocialLinks href='#'><FontAwesomeIcon icon={faEnvelope} size='lg' /></SocialLinks></SocialListItem>
+          </SocialList>
+        </FooterComponentColumn>
+        <FooterComponentColumn>
+          <FooterLinksListHeader>Shop Mattresses</FooterLinksListHeader>
+          <FooterLinksList>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Shop Kids</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Shop Adults</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Shop Pets</a></p></FooterLinksListItems>
+          </FooterLinksList>
+        </FooterComponentColumn>
+        <FooterComponentColumn>
+          <FooterLinksListHeader>Learn More</FooterLinksListHeader>
+          <FooterLinksList>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>About Us</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Reviews</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Frequently Asked Questions</a></p></FooterLinksListItems>
+          </FooterLinksList>
+        </FooterComponentColumn>
+        <FooterComponentColumn>
+          <FooterLinksListHeader>Warranties</FooterLinksListHeader>
+          <FooterLinksList>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>101 night sleep guarantee</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Our 10 year warranty</a></p></FooterLinksListItems>
+            <FooterLinksListItems><p><a href='https://www.washeabelle.com'>Shipping and returns</a></p></FooterLinksListItems>
+          </FooterLinksList>
+        </FooterComponentColumn>
+      </FooterComponentContainer>
+    </div>
+    <FooterEnd>
+        2018 Washabelle All Rights Reserved
+    </FooterEnd>
+  </FooterComponent>
+)
+
+export default Footer
