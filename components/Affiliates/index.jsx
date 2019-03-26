@@ -13,15 +13,15 @@ const AffiliatesFixture = [
     copy: null,
     image: {
       url: affiliat1,
-      description: 'Scarlet Paolicchi, Family Focus Blog',
-      alt: 'Alt text'
+      description: 'Audrey Morissette, Mamadrey88',
+      alt: '@mamadrey88',
     },
   },
   {
     id: 2,
     copy: 'Washabelle is the first and only machine washable mattress so my followers are excited to hear about this revolutionary product. And it’s nice to make money just by sharing Washabelle’s fantastic content.',
     link: {
-      text: 'Love that max blog',
+      text: 'This Little Wandering Blog',
       url: 'https://www.washabelle.com',
     },
     image: null,
@@ -31,15 +31,15 @@ const AffiliatesFixture = [
     copy: null,
     image: {
       url: affiliat2,
-      description: 'Felicia Carter, Go Grow Go',
-      alt: 'Alt text'
+      description: 'Lex Valishvili, DailyParenting',
+      alt: 'Daily Parenting Blog',
     },
   },
   {
     id: 4,
-    copy: 'Thanks to Team washabelle I can recommend the only machine washable dryable mattress out there while monetizing my blog. Selling a great product gives you great results!',
+    copy: 'What could be better than making money while you talk about a product you love. Washabelle is a great company with a dream come true product.',
     link: {
-      text: 'Love that max blog',
+      text: '@mamadrey88',
       url: 'https://www.washabelle.com',
     },
     image: null,
@@ -49,15 +49,15 @@ const AffiliatesFixture = [
     copy: null,
     image: {
       url: affiliat3,
-      description: 'Love That Max',
-      alt: 'Alt text'
+      description: 'Kayla Petering, This Little Wandering',
+      alt: 'This Little Wandering Blog'
     },
   },
   {
     id: 6, 
-    copy: 'Washabelle is the first and only machine washable mattress so my followers are excited to hear about this revolutionary product. And it’s nice to make money just by sharing Washabelle’s fantastic content.',
+    copy: 'The Washabelle Affiliate Program is easy. Just sign up, share their awesome content and start making money. Your followers will love this product.',
     link: {
-      text: 'Love that max blog',
+      text: 'Daily Parenting Blog',
       url: 'https://www.washabelle.com',
     },
     image: null,
